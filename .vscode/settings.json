@@ -1,0 +1,3 @@
+{
+    "phpSniffer.standard": "$HOME/.composer/vendor/pragmarx/laravelcs/Standards/Laravel/"
+}
