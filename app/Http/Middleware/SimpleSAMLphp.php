@@ -20,14 +20,14 @@ class SimpleSAMLphp
          * Load SimpleSAMLphp library
          */
         require_once(config('simplesamlphp.path'));
-        $as = new \SimpleSAML\Auth\Simple(config('simplesamlphp.sp'));
-        $as->requireAuth();
+        $auth = new \SimpleSAML\Auth\Simple(config('simplesamlphp.sp'));
 
         /**
-         * Store Username in Session
+         * Store Username and Auth Object in Session
          */
-        $attributes = $as->getAttributes();
+        $attributes = $auth->getAttributes();
         session(['username' => $attributes[config('simplesamlphp.username')][0]]);
+        session(['logout_url' => $auth->getLogoutURL('https://www.bellevuecollege.edu')]);
 
         return $next($request);
     }

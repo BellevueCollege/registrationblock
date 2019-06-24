@@ -6,10 +6,8 @@
 
 @section('content')
 <ul>
-    <li>First Name: {{ $firstName }}</li>
-    <li>Last Name: {{ $lastName }}</li>
-    <li>Email: {{ $email }}</li>
-    <li>SID: {{ $SID }}</li>
+    <li>First Name: {{ $userData['firstName'] }}</li>
+    <li>Last Name: {{ $userData['lastName'] }}</li>
 </ul>
 @endsection
 
