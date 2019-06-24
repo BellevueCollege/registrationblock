@@ -11,8 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/blocks', 'BlocksController@blockList')->name('home');
+Route::get('/', 'BlocksController@blockList')->name('home');
