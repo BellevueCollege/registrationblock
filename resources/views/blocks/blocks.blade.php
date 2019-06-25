@@ -5,9 +5,11 @@
 @endsection
 
 @section('content')
-<ul>
-    <li>First Name: {{ $userData['firstName'] }}</li>
-    <li>Last Name: {{ $userData['lastName'] }}</li>
-</ul>
+<h2>You have the following blocks on your account</h2>
+<ol>
+@foreach ($userData['blocks'] as $block)
+<li>{{ $block->reason }}</li>
+@endforeach
+</ol>
 @endsection
 

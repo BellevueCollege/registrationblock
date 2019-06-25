@@ -38,20 +38,25 @@
 		<div id="main" class="container no-padding">
 			<div class="content-padding">
 				<div id="site-header">
-					@yield('title')
+					<h1 class="site-title">Verify Blocked Registration</h1>
 				</div><!-- container header -->
 			</div><!-- content-padding -->
 			<div class="row">
 				<div class="col-md-12">
 					<div id="content"  class="box-shadow">
 						<div class="row row-padding">
-							<div class="col-md-12">
+							<div class="col-md-9">
 								<main role="main">
 									<div class="content-padding" data-swiftype-name="body" data-swiftype-type="text" style="margin-top: 1em;">
-										<div class="pull-right">You are logged in as {{ $username }}. <a href="{{ $logout }}" class="btn btn-default">Log Out</a></div>
 										@yield('content')
+										<div class="well well-sm">The information displayed on this page is refreshed every 24 hours at 6am.</div>
 									</div><!--.content-padding-->
 								</main>
+							</div>
+							<div class="col-md-3">
+									<div class="content-padding" style="margin-top: 1em;">
+										<div class="well well-sm"><p>You are logged in as {{ $username }}. </p><p><a href="{{ $logout }}" class="btn btn-default btn-sm">Log Out</a></p></div>
+									</div>
 							</div>
 						</div>
 					</div><!-- #content-->

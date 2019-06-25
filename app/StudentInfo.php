@@ -69,7 +69,7 @@ class StudentInfo
             $processed = [
                 'firstName' => $raw->data->firstName,
                 'lastName'  => $raw->data->lastName,
-                'blocks'    => $raw->data->blocks,
+                'blocks'    => $raw->data->blocks, // array of objects, 'blockID' and 'reason'
             ];
         } else {
             $processed = null;
