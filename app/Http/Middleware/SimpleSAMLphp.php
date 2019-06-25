@@ -21,6 +21,7 @@ class SimpleSAMLphp
          */
         require_once(config('simplesamlphp.path'));
         $auth = new \SimpleSAML\Auth\Simple(config('simplesamlphp.sp'));
+        $auth->requireAuth();
 
         /**
          * Store Username and Auth Object in Session
