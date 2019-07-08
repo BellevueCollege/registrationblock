@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('title')
-<h1 class="site-title">Registration Block</h1>
+<p class="site-title">Registration Block</p>
 @endsection
 
 @section('content')

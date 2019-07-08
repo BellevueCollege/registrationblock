@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('title')
-<h1 class="site-title">Verify Blocked Registration</h1>
+<p class="site-title">Verify Blocked Registration</p>
 @endsection
 
 @section('content')
