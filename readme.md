@@ -14,6 +14,12 @@ If you would like to develop this in an environment without SimpleSAMLphp availa
 
 Adding something like `$username = 'student.test';` as the first thing inside the `loadUserInfo` class should do it.
 
+## Release Status
 
+### Master Branch:
+[coming soon]
 
+### Dev Branch:
+
+[![Build status](https://dev.azure.com/bcintegration/Registration%20Block/_apis/build/status/registrationblock-dev)](https://dev.azure.com/bcintegration/Registration%20Block/_build/latest?definitionId=21)
 
