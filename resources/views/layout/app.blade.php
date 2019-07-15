@@ -38,7 +38,7 @@
 		<div id="main" class="container no-padding">
 			<div class="content-padding">
 				<div id="site-header">
-					<h1 class="site-title">Verify Blocked Registration</h1>
+					<p class="site-title">Verify Blocked Registration</p>
 				</div><!-- container header -->
 			</div><!-- content-padding -->
 			<div class="row">

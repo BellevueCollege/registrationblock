@@ -1,9 +1,5 @@
 @extends('layout.app')
 
-@section('title')
-<p class="site-title">Registration Block</p>
-@endsection
-
 @section('content')
 <div class="alert alert-warning">
     <h1>This is not a student account</h1>
