@@ -24,7 +24,7 @@ class BlocksController extends Controller
         );
 
         $user = $dataAPI->getUser(
-            'local' !== config('app.env') ? session('username') : 't.test',
+            session('username'),
             $token
         );
 
