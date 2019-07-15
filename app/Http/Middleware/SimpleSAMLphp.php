@@ -19,16 +19,24 @@ class SimpleSAMLphp
         /**
          * Load SimpleSAMLphp library
          */
-        require_once(config('simplesamlphp.path'));
-        $auth = new \SimpleSAML\Auth\Simple(config('simplesamlphp.sp'));
-        $auth->requireAuth();
+        if ( 'local' !== config('app.env') && 'testing' !== config('app.env') )
+        {
+            require_once(config('simplesamlphp.path'));
+            $auth = new \SimpleSAML\Auth\Simple(config('simplesamlphp.sp'));
+            $auth->requireAuth();
 
-        /**
-         * Store Username and Auth Object in Session
-         */
-        $attributes = $auth->getAttributes();
-        session(['username' => $attributes[config('simplesamlphp.username')][0]]);
-        session(['logout_url' => $auth->getLogoutURL('https://www.bellevuecollege.edu')]);
+            /**
+             * Store Username and Auth Object in Session
+             */
+            $attributes = $auth->getAttributes();
+            session(['username' => $attributes[config('simplesamlphp.username')][0]]);
+            session(['logout_url' => $auth->getLogoutURL('https://www.bellevuecollege.edu')]);
+        }
+        else // Disable auth on test and local environments
+        {
+            session(['username' => 't.test']); // Modify this username if needed
+            session(['logout_url' => 'https://www.bellevuecollege.edu']);
+        }
 
         return $next($request);
     }
