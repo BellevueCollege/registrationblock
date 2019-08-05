@@ -68,7 +68,7 @@ At Bellevue College this is set up to deploy through Azure DevOps Pipelines. If 
 ## Build Status 🚀
 | Master | Dev |
 |---|---|
-| [coming soon] | [![Build status](https://dev.azure.com/bcintegration/Registration%20Block/_apis/build/status/registrationblock-dev)](https://dev.azure.com/bcintegration/Registration%20Block/_build/latest?definitionId=21) |
+| [![Build status](https://dev.azure.com/bcintegration/Registration%20Block/_apis/build/status/registrationblock-master)](https://dev.azure.com/bcintegration/Registration%20Block/_build/latest?definitionId=22) | [![Build status](https://dev.azure.com/bcintegration/Registration%20Block/_apis/build/status/registrationblock-dev)](https://dev.azure.com/bcintegration/Registration%20Block/_build/latest?definitionId=21) |
 
 ## The BadgeZone 💫
 [![emoji-log](https://cdn.rawgit.com/ahmadawais/stuff/ca97874/emoji-log/flat-round.svg)](https://github.com/ahmadawais/Emoji-Log/)
