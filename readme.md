@@ -8,6 +8,8 @@ This project requires access to the following resources:
 2. [SimpleSAMLphp](https://simplesamlphp.org/) must be installed and configured on the same server on which this project is installed.
 3. [Globals v3.x](https://github.com/bellevuecollege/globals) must be available locally
 
+**Note:** Symfony HTTP Foundation version 4.4 and above break SimpleSAMLphp integration. To prevent this from breaking, the version is pegged to ~4.3.8 in composer.json; when this issue is fixed, this dependency should no longer be specified.
+
 ## Setting up a local development environment 👨🏼‍💻
 Using Laravel's [Homestead VM](https://laravel.com/docs/5.8/homestead) is a great way to get this up and running in a local environment.
 
