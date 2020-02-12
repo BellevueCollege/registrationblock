@@ -29,13 +29,14 @@ class SimpleSAMLphp
              * Store Username and Auth Object in Session
              */
             $attributes = $auth->getAttributes();
-            session(['username' => $attributes[config('simplesamlphp.username')][0]]);
-            session(['logout_url' => $auth->getLogoutURL('https://www.bellevuecollege.edu')]);
+            $request->attributes->add(['username' => $attributes[config('simplesamlphp.username')][0]]);
+            $request->attributes->add(['logoutUrl' => $auth->getLogoutURL('https://www.bellevuecollege.edu')]);
+
         }
         else // Disable auth on test and local environments
         {
-            session(['username' => 't.test']); // Modify this username if needed
-            session(['logout_url' => 'https://www.bellevuecollege.edu']);
+            $request->attributes->add(['username' => 't.test']); // Modify this username if needed
+            $request->attributes->add(['logoutUrl' => 'https://www.bellevuecollege.edu']);
         }
 
         return $next($request);
