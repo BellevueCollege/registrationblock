@@ -8,6 +8,8 @@ This project requires access to the following resources:
 2. [SimpleSAMLphp](https://simplesamlphp.org/) must be installed and configured on the same server on which this project is installed.
 3. [Globals v3.x](https://github.com/bellevuecollege/globals) must be available locally
 
+**Note:** Symfony HTTP Foundation version 4.4 and above break SimpleSAMLphp integration. To prevent this from breaking, the version is pegged to ~4.3.8 in composer.json; when this issue is fixed, this dependency should no longer be specified.
+
 ## Setting up a local development environment 👨🏼‍💻
 Using Laravel's [Homestead VM](https://laravel.com/docs/5.8/homestead) is a great way to get this up and running in a local environment.
 
@@ -68,7 +70,7 @@ At Bellevue College this is set up to deploy through Azure DevOps Pipelines. If 
 ## Build Status 🚀
 | Master | Dev |
 |---|---|
-| [coming soon] | [![Build status](https://dev.azure.com/bcintegration/Registration%20Block/_apis/build/status/registrationblock-dev)](https://dev.azure.com/bcintegration/Registration%20Block/_build/latest?definitionId=21) |
+| [![Build status](https://dev.azure.com/bcintegration/Registration%20Block/_apis/build/status/registrationblock-master)](https://dev.azure.com/bcintegration/Registration%20Block/_build/latest?definitionId=22) | [![Build status](https://dev.azure.com/bcintegration/Registration%20Block/_apis/build/status/registrationblock-dev)](https://dev.azure.com/bcintegration/Registration%20Block/_build/latest?definitionId=21) |
 
 ## The BadgeZone 💫
 [![emoji-log](https://cdn.rawgit.com/ahmadawais/stuff/ca97874/emoji-log/flat-round.svg)](https://github.com/ahmadawais/Emoji-Log/)

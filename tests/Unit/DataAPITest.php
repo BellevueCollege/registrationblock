@@ -20,7 +20,7 @@ class StudentInfoTest extends TestCase
     /**
      * A basic unit test example.
      */
-    public function setUp()
+    public function setUp() : void
     {
         parent::setUp();
         Cache::flush();

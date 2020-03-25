@@ -10,7 +10,7 @@ use App\DataAPI;
 class BlocksController extends Controller
 {
     //
-    public function blockList()
+    public function blockList(Request $request)
     {
         /**
          * Load from Data API
@@ -24,14 +24,14 @@ class BlocksController extends Controller
         );
 
         $user = $dataAPI->getUser(
-            session('username'),
+            $request->get('username'),
             $token
         );
 
         $data = array(
             'userData' => $user,
-            'username' => session('username'),
-            'logout'   => session('logout_url'),
+            'username' => $request->get('username'),
+            'logout'   => $request->get('logoutUrl'),
         );
 
         if (null !== $user && null !== $user['blocks'])
@@ -44,7 +44,7 @@ class BlocksController extends Controller
         }
         else
         {
-            Log::info( 'User '. (null !== session('username') ? session('username') : '[NOT SET]') .' logged in, had no student record');
+            Log::info( 'User '. (null !== $request->get('username') ? $request->get('username') : '[NOT SET]') .' logged in, had no student record');
             return view('error/notStudent', $data);
         }
 
