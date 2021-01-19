@@ -7,7 +7,7 @@
         "php": "^7.3",
         "fideloper/proxy": "^4.2",
         "guzzlehttp/guzzle": "^6.5",
-        "laravel/framework": "6.0.*",
+        "laravel/framework": "6.20.*",
         "laravel/helpers": "^1.1",
         "laravel/tinker": "^2.1",
         "symfony/http-foundation": "~4.3.8"
